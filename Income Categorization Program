@@ -1,0 +1,30 @@
+//Income Categorization Program
+
+#include<stdio.h>
+void main(){ int a;
+	scanf("%d",&a);
+	if(a<=9) printf("Insufficient Earning\n");
+	else if(a<=99) printf("Very Low Earning\n");
+	else if(a<=999) printf("Low Earning\n");
+	else if(a<=9999) printf("Sufficient Earning\n");
+	else printf("High Earning\n");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+73	
+Very·Low·Earning	
+Test case 2
+95	
+Very·Low·Earning	
+Test case 3
+2	
+Insufficient·Earning	
+Test case 4
+8	
+Insufficient·Earning
+
+*/
