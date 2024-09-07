@@ -1,0 +1,75 @@
+
+
+/*
+
+Caleb and Irfan are purchasing apples that are priced according to their size, but their budget is limited.
+
+
+
+To ensure they stay within budget, they plan to choose one small (apple1), one medium (apple2), and one large (apple3) apple.
+
+
+
+Can you help them determine if their choices fit into their budget? Check the condition: if apple2 is greater than apple1 and apple3 is greater than apple2. If this condition is true, print "Fit into Budget"; otherwise, print "Doesn't fit into Budget.
+
+
+
+Constraints:
+
+1 ≤ apple1 ≤ 2000
+
+1 ≤ apple2 ≤ 2000
+
+1 ≤ apple3 ≤ 2000
+
+
+
+Input format:
+
+First Line: Single number of type integer representing the size of apple1
+
+Second Line: Single number of type integer representing the size of apple2
+
+Third Line: Single number of type integer representing the size of apple3
+
+
+
+Output Format:
+
+The output is a string representing: "Fit into Budget" or "Doesn't fit into Budget" based on the given condition.
+
+
+*/
+
+#include<stdio.h>
+void main(){ int a,b,c;
+	scanf("%d\n%d\n%d",&a,&b,&c);
+	if(b>a && c>b) printf("Fit into Budget\n");
+	else printf("Doesn't fit into Budget\n");}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+380	
+170	
+429	
+Doesn't·fit·into·Budget	
+Test case 2
+570	
+280	
+632	
+Doesn't·fit·into·Budget	
+Test case 3
+102	
+237	
+398	
+Fit·into·Budget	
+Test case 4
+567	
+924	
+1563	
+Fit·into·Budget
+
+*/
