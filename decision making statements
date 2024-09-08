@@ -1,0 +1,29 @@
+Example on decision making statements - Approximation Checker
+
+
+#include<stdio.h>
+void main(){ float a,b;
+	scanf("%f %f",&a,&b);
+	if(a-b<=1 && a-b>=-1) printf("Approximate\n");
+	else printf("Not approximate\n");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+49.1 49.6	
+Approximate	
+Test case 2
+18.3 18.9	
+Approximate	
+Test case 3
+26.1 27.3	
+Not·approximate	
+Test case 4
+45.9 48.2	
+Not·approximate
+
+
+*/
