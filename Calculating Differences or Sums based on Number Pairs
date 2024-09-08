@@ -1,0 +1,33 @@
+
+//Calculating Differences or Sums based on Number Pairs
+
+#include<stdio.h>
+void main(){ int a,b;
+	scanf("%d %d",&a,&b);
+	if(a>b) printf("%d\n",a-b);
+	else printf("%d\n",a+b);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+1746 1429	
+317	
+Test case 2
+2549 845	
+1704	
+Test case 3
+1921 3238	
+5159	
+Test case 4
+7926 10549	
+18475	
+Test case 5
+6871 36579	
+43450
+
+
+*/
