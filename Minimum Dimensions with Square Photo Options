@@ -1,0 +1,35 @@
+
+//Minimum Dimensions with Square Photo Options
+
+#include<stdio.h>
+void main(){ int a,b,c;
+	scanf("%d\n%d %d",&a,&b,&c);
+	if(c && b == a) printf("ACCEPTED\n");
+	else if(b<a || c<a) printf("UPLOAD ANOTHER\n");
+	else printf("CROP IT\n");
+}
+
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+150	
+720 480	
+CROP·IT	
+Test case 2
+259	
+496 598	
+CROP·IT	
+Test case 3
+180	
+100 120	
+UPLOAD·ANOTHER	
+Test case 4
+598	
+235 415	
+UPLOAD·ANOTHER
+
+*/
