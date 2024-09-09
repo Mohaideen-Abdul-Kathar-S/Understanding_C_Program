@@ -1,0 +1,28 @@
+Streamlining Eligibility Checks with Age and Weight Criteria
+
+
+#include<stdio.h>
+void main(){ int a,b;
+	scanf("%d %d",&a,&b);
+	if(a>=18 && b>=40) printf("Eligible for Donation\n");
+	else printf("Not Eligible for Donation\n");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+39 52	
+Eligible·for·Donation	
+Test case 2
+63 92	
+Eligible·for·Donation	
+Test case 3
+14 89	
+Not·Eligible·for·Donation	
+Test case 4
+8 15	
+Not·Eligible·for·Donation
+
+*/
