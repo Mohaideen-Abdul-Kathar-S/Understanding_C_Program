@@ -1,0 +1,45 @@
+//Write a C program to display the factors of a given number and check whether it is a prime or not.
+
+
+
+#include<stdio.h>
+void main(){
+	int a,b[50],n=0,m,j;
+	printf("Integer: ") && scanf("%d",&a);
+	for(int i=1;i<=a;i++){
+		for(int j=1;j<=a;j++){
+			if(j*i==a){
+				b[n]=j;
+				n++;
+			}
+		}
+	}
+	m=n;
+	j=0;
+	printf("Factors: ");
+	for(n=m-1;n>=0;n--){
+		printf("%d ",b[n]);
+		j++;
+	}
+	if(j==2){
+		printf("\nPrime number\n");
+	}
+	else{
+		printf("\nNot a prime number\n");
+	}
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Integer:·16	
+Factors:·1·2·4·8·16·⏎	
+Not·a·prime·number⏎	
+Test case 2
+Integer:·13	
+Factors:·1·13·⏎	
+Prime·number⏎
+
+*/
