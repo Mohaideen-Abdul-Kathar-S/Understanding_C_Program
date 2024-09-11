@@ -1,0 +1,50 @@
+//Write a program to find the series of prime numbers in the given range using do-while loop.
+
+
+#include <stdio.h>
+int main() {
+    int start, end;
+    printf("Range:");
+    scanf("%d %d", &start, &end);
+    printf("Prime numbers:");
+	bool m;
+	int i;
+	start++;
+    // Adjust start to ensure it is within a valid range for the prime check
+  
+	//fill in the missing code..
+    do {
+		for(i=2;i<start;i++){
+			m=true;
+			if(start%i==0){
+				m=false;
+				break;
+			}
+		}
+		if(m){
+			printf("%d ",start);
+		}
+		start++;
+        
+        
+   } while (start<end );
+
+	printf("\n");
+    return 0;
+
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Range:1 23	
+Prime·numbers:3·5·7·11·13·17·19·⏎	
+Test case 2
+Range:3 50	
+Prime·numbers:5·7·11·13·17·19·23·29·31·37·41·43·47·⏎	
+
+
+*/
