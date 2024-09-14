@@ -1,0 +1,30 @@
+//Sum of Digits
+
+
+#include<stdio.h>
+void main()
+{
+	int a,b=0;
+	printf("Enter a number : ");
+	scanf("%d",&a);
+	for(int i=0;a!=0;i++)
+		{
+	b=b+a%10;
+	a=a/10;
+		}
+	printf("Sum of the digits : %d\n",b);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·a·number·:·100	
+Sum·of·the·digits·:·1⏎	
+Test case 2
+Enter·a·number·:·123	
+Sum·of·the·digits·:·6⏎
+
+*/
