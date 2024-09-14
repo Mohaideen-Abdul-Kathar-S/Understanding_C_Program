@@ -1,0 +1,26 @@
+
+
+
+#include<stdio.h>
+void main(){ int a=0,b=0;
+	for(int i=0;a!=-1;i++){
+		b=b+a;
+		printf("Enter amount : ") && scanf("%d",&a);}
+		printf("Total amount : %d\n",b);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·amount·:·100	
+Enter·amount·:·200	
+Enter·amount·:·150	
+Enter·amount·:·-1	
+Total·amount·:·450⏎	
+Test case 2
+Enter·amount·:·-1	
+Total·amount·:·0⏎
+
+*/
