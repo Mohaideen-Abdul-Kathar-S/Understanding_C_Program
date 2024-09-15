@@ -1,0 +1,39 @@
+//Durga is learning pattern printing, he wanted to print right angled triangle by using no of rows. Help him to print the pattern.
+
+
+#include<stdio.h>
+void main()
+{
+	int a;
+	printf("Enter no of rows : ");
+	scanf("%d",&a);
+	for(int i=1;i<=a;i++){{
+		for(int j=1;j<=i;j++)
+			{
+				printf("* ");
+			}
+		printf("\n");}
+}
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·no·of·rows·:·5	
+*·⏎	
+*·*·⏎	
+*·*·*·⏎	
+*·*·*·*·⏎	
+*·*·*·*·*·⏎	
+Test case 2
+Enter·no·of·rows·:·4	
+*·⏎	
+*·*·⏎	
+*·*·*·⏎	
+*·*·*·*·⏎
+
+
+*/
