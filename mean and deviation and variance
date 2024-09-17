@@ -1,0 +1,60 @@
+/*
+
+Write a C program to store the numbers given by the user in an array, and then find the mean, deviation & variance.
+
+
+
+Note: Mean =   mean = Total sum / n
+
+
+
+Variation =\sigma={\sqrt {\frac {\sum(x_{i}-{\mu})^{2}}{N}}}
+
+
+
+Deviation = sqrt(variance);
+
+*/
+
+
+#include<stdio.h>
+#include<math.h>
+int main(){
+	float a[10],b=0,g=0,c=0;
+	int i,n;
+	printf("Enter the number of values: ") && scanf("%d",&n);
+	printf("Enter values : ");
+	for(i=0;i<n;i++){
+		scanf("%f",&a[i]);
+	}
+	for(i=0;i<n;i++){
+		b=a[i]+b;
+	}
+	printf("Mean = %0.2f\n",b/n);
+	for(i=0;i<n;i++){
+		c=b/n-a[i];
+		g=g+c*c;
+		c=0;
+	}
+	printf("Variance = %0.2f\n",g/n);
+	printf("Deviation  = %0.2f\n",sqrt(g/n) );
+	return 0;
+}
+
+
+/*
+
+Test case 1
+Enter·the·number·of·values:·5	
+Enter·values·:·12.3 34.3 45.6 21.6 66.6	
+Mean·=·36.08⏎	
+Variance·=·360.09⏎	
+Deviation··=·18.98⏎	
+Test case 2
+Enter·the·number·of·values:·3	
+Enter·values·:·2.98 5.65 7.54	
+Mean·=·5.39⏎	
+Variance·=·3.50⏎	
+Deviation··=·1.87⏎
+
+*/
