@@ -1,0 +1,33 @@
+//Write a C program to store and display elements of an array.
+
+
+#include<stdio.h>
+int main(){
+	int a[10],i,n;
+	printf("Enter size: ") && scanf("%d",&n);
+	printf("Enter elements: ");
+	for(i=0;i<n;i++){
+		scanf("%d ",&a[i]);
+	}
+	printf("The elements of array: ");
+	for(i=0;i<n;i++){
+		printf("%d ",a[i]);
+	}
+	return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·size:·6	
+Enter·elements:·23 56 89 74 12 36	
+The·elements·of·array:·23·56·89·74·12·36·	
+Test case 2
+Enter·size:·5	
+Enter·elements:·23 -25 87 41 36	
+The·elements·of·array:·23·-25·87·41·36·
+
+*/
