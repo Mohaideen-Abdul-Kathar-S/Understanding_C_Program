@@ -1,0 +1,42 @@
+
+
+
+#include<stdio.h>
+int main(){
+	int a[10],n,i,j,b=0;
+	printf("Enter size: ") &&  scanf("%d",&n);
+	printf("Enter elements: ");
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	printf("Enter search key: ") && scanf("%d",&j);
+	for(i=0;i<n;i++){
+		if(j==a[i]){
+			printf("%d found at position %d\n",j,i+1);
+			b++;
+		break;
+		}
+	}
+	if(b==0){
+		printf("%d not found\n",j);
+	}
+	return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·size:·6	
+Enter·elements:·11 22 33 44 55 66	
+Enter·search·key:·33	
+33·found·at·position·3⏎	
+Test case 2
+Enter·size:·6	
+Enter·elements:·11 22 33 44 55 66	
+Enter·search·key:·75	
+75·not·found⏎
+
+*/
