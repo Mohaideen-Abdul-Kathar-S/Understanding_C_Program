@@ -1,0 +1,157 @@
+
+//Create an array and perform display, insert at location and delete at location operations.
+
+
+#include <stdio.h>
+
+void displayArray(void);
+void deleteNumber(int);
+void insertNumber(int,int);
+int size,arr[50],r;
+void displayArray(){
+	if(size>=0){
+	printf("Array elements: ");
+	for(int i=0;i<size;i++){
+		printf("%d ",arr[i]);
+	}
+	printf("\n");
+	}
+}
+void deleteNumber(int location){
+	int i,k;
+	if(size>0){
+	if(size<0 || location<0 || location>=size){
+		printf("Invalid location\n");
+	}
+	else{
+	for(int i=location;i<size;i++){
+		if(i==location){
+			k=arr[i];
+		}
+		if(i==size-1){
+			arr[i]=0;
+					 }
+		else{
+			arr[i]=arr[i+1];
+		}
+	}
+		size=size-1;
+		printf("%d deleted from location %d\n",k,location);
+	}
+	}
+}
+void insertNumber(int location, int number){ 
+	int i;
+	size=size+1;
+	if(size>0){
+	if(size<=location || location<0){
+		printf("Invalid location\n");
+		size=size-1;
+	}
+	else{
+		for(i=size-1;i>=location;i--){
+			arr[i]=arr[i-1];
+		}
+		arr[location]=number;
+		printf("%d inserted at location %d\n",number,location);
+	}
+	}
+}
+
+int main() {
+    printf("Enter size: ");
+    scanf("%d", &size);
+
+    printf("Enter %d elements: ", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    displayArray();
+
+    int choice, location, number;
+
+    printf("1. Insert a number\n2. Delete a number\n3. Exit\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    while (choice == 1 || choice == 2) {
+        if (choice == 1) {
+            printf("Location: ");
+            scanf("%d", &location);
+            printf("Number: ");
+            scanf("%d", &number);
+            insertNumber(location, number);
+        } else if (choice == 2) {
+            printf("Location: ");
+            scanf("%d", &location);
+            deleteNumber(location);
+        }
+
+        displayArray();
+
+        printf("1. Insert a number\n2. Delete a number\n3. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
+    }
+
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·size:·5	
+Enter·5·elements:·12 15 16 14 18	
+Array·elements:·12·15·16·14·18·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+Location:·4	
+18·deleted·from·location·4⏎	
+Array·elements:·12·15·16·14·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+Location:·4	
+Invalid·location⏎	
+Array·elements:·12·15·16·14·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+Location:·4	
+Number:·10	
+10·inserted·at·location·4⏎	
+Array·elements:·12·15·16·14·10·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+Location:·7	
+Number:·150	
+Invalid·location⏎	
+Array·elements:·12·15·16·14·10·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·3	
+Test case 2
+Enter·size:·1	
+Enter·1·elements:·1	
+Array·elements:·1·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+Location:·0	
+1·deleted·from·location·0⏎	
+Array·elements:·⏎	
+1.·Insert·a·number⏎	
+2.·Delete·a·number⏎	
+3.·Exit⏎	
+Enter·your·choice:·3
+
+*/
