@@ -1,0 +1,40 @@
+
+//Absolute difference between any two consecutive integer
+
+
+#include<stdio.h>
+#include<math.h>
+int main(){ int a[50],n,b,i;
+	scanf("%d %d",&n,&b);
+	for(int i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	for(i=0;i<n-1;i++){
+		if(abs(a[i]-a[i+1])<=b){
+			puts("YES");
+			return 0;
+		}
+	}
+			puts("NO");
+			return 0;
+}
+
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+7 4	
+11 7 18 21 32 45 52	
+YES	
+Test case 2
+5 11	
+19 23 45 65 95	
+YES	
+Test case 3
+5 61	
+221 412 326 951 548	
+NO
+
+*/
