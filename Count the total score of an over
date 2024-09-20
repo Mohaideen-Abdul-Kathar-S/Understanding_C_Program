@@ -1,0 +1,27 @@
+//Count the total score of an over
+
+
+#include<stdio.h>
+void main(){ int a[50],b=0;
+	for(int i=0;i<6;i++){
+		scanf("%d",&a[i]);
+		}
+			for(int i=0;i<6;i++){
+				b=b+a[i];
+			}
+			printf("Total: %d\n",b);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+2 1 0 6 0 1	
+Total:·10⏎	
+Test case 2
+1 1 2 0 1 2	
+Total:·7⏎
+
+*/
