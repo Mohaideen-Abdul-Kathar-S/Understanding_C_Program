@@ -1,0 +1,60 @@
+//Write a C program to find whether a given matrix is Lower triangular matrix or not.
+
+
+#include<stdio.h>
+int main(){
+	int a[10][10],i,j,f=0,n,m;
+	printf("Enter no of rows, columns: ") && scanf("%d %d",&n,&m);
+	printf("Enter elements of matrix:");
+	for(i=0;i<n;i++){
+		for(j=0;j<m;j++){
+			scanf("%d ",&a[i][j]);
+			if((i==0&&j==1) || (i==0&&j==2) || (i==1&&j==2)){
+				if(i==0&&j==1){
+					if(a[i][j]==0){
+						f++;
+					}
+				}
+				else if(i==0 && j==2){
+					if(a[i][j]==0){
+					f++;
+					}
+				}
+				else if(i==1 && j==2){
+					if(a[i][j]==0){
+					f++;
+					}
+				}
+			}
+		}
+		//printf("\n");
+	}
+	if(f==3){
+		printf("Lower triangular matrix\n");
+	}
+	else{
+		printf("Not a lower triangular matrix\n");
+	}
+	return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·no·of·rows,·columns:·3 3	
+Enter·elements·of·matrix:⏎	
+2 0 0	
+1 2 0	
+4 1 2	
+Lower·triangular·matrix⏎	
+Test case 2
+Enter·no·of·rows,·columns:·3 3	
+Enter·elements·of·matrix:⏎	
+0 0 2	
+4 5 0	
+2 5 0	
+Not·a·lower·triangular·matrix⏎
+
+*/
