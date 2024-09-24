@@ -1,0 +1,59 @@
+
+//Write a C program to find whether a given matrix is an Upper triangular matrix or not.
+
+
+#include<stdio.h>
+int main(){
+	int a[5][5],i,j,f=0,n,m;
+	printf("Enter no of rows, columns: ") && scanf("%d %d",&n,&m);
+	printf("Enter elements of matrix:");
+	for(i=0;i<n;i++){
+		for(j=0;j<m;j++){
+			scanf("%d ",&a[i][j]);
+			if((i==1&&j==0) || (i==2&&j==0) || (i==2&&j==1)){
+				if(i==1&&j==0){
+					if(a[i][j]==0){
+						f++;
+					}
+				}
+				else if(i==2&&j==0){
+					if(a[i][j]==0){
+						f++;
+					}
+				}
+				else if(i==2&&j==1){
+					if(a[i][j]==0){
+						f++;
+					}
+				}
+			}
+		}
+	}
+	if(f==3){
+	printf("Upper triangular matrix\n");
+	}
+	else{
+		printf("Not an upper triangular matrix\n");
+	}
+	return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·no·of·rows,·columns:·3 3	
+Enter·elements·of·matrix:⏎	
+1 2 3	
+0 2 6	
+0 0 6	
+Upper·triangular·matrix⏎	
+Test case 2
+Enter·no·of·rows,·columns:·2 2	
+Enter·elements·of·matrix:⏎	
+12 13	
+14 15	
+Not·an·upper·triangular·matrix⏎
+
+*/
