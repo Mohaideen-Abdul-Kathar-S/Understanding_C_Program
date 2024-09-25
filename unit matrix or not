@@ -1,0 +1,61 @@
+
+//Write a C program to find whether the given matrix is unit matrix or not.
+
+
+#include<stdio.h>
+int main(){
+	int a[5][5];
+	int i,j,f=0,n,m;
+	printf("Enter the size of the matrix: ") && scanf("%d",&n);
+	m=n;
+	if(n){
+		printf("Enter the matrix elements:\n");
+		for(i=0;i<n;i++){
+			for(j=0;j<m;j++){
+				scanf("%d",&a[i][j]);
+				if(i==j){
+					if(a[i][j]==1){
+						f++;
+					}
+				}
+				else{
+					if(a[i][j]==0){
+						f++;
+					}
+				}
+			}
+		}
+		if(f==n*n){
+		printf("The matrix is a unit matrix.\n");
+		}
+		else{
+			printf("The matrix is not a unit matrix.\n");
+		}
+		
+
+
+		
+	}
+	return 0;
+}
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·the·size·of·the·matrix:·3	
+Enter·the·matrix·elements:⏎	
+1 0 0	
+0 1 0	
+0 0 1	
+The·matrix·is·a·unit·matrix.⏎	
+Test case 2
+Enter·the·size·of·the·matrix:·4	
+Enter·the·matrix·elements:⏎	
+1 2 3 4	
+3 4 5 6	
+4 5 6 7	
+4 5 6 7	
+The·matrix·is·not·a·unit·matrix.⏎
+
+*/
