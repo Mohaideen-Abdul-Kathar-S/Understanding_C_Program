@@ -1,0 +1,82 @@
+//Write a C program to find whether a given matrix is a Scalar matrix or not.
+
+
+#include<stdio.h>
+int main (){
+	int a[5][5],i,j,f=0,n,m;
+	printf("Enter no of rows, columns: ") && scanf("%d %d",&n,&m);
+	printf("Enter the elements:");
+	for(i=0;i<n;i++){
+		for(j=0;j<m;j++){
+			scanf("%d",&a[i][j]);
+			if(i==0&&j==1){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==0&&j==2){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==1&&j==0){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==1&&j==1){
+				if(a[i][j]==a[0][0]){
+					f++;
+				}
+			}
+			else if(i==1&&j==2){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==2&&j==0){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==2&&j==1){
+				if(a[i][j]==0){
+					f++;
+				}
+			}
+			else if(i==2&&j==2){
+				if(a[i][j]==a[0][0]){
+					f++;
+				}
+			}
+		}
+	}
+	if(f==8){
+		printf("Scalar matrix\n");
+	}
+	else{
+		printf("Not a scalar matrix\n");
+	}
+	return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·no·of·rows,·columns:·3 3	
+Enter·the·elements:⏎	
+1 0 0	
+1 0 1	
+1 1 0	
+Not·a·scalar·matrix⏎	
+Test case 2
+Enter·no·of·rows,·columns:·3 3	
+Enter·the·elements:⏎	
+1 0 0	
+0 1 0	
+0 0 1	
+Scalar·matrix⏎
+
+*/
