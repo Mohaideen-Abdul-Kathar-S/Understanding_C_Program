@@ -1,0 +1,66 @@
+#include<stdio.h>
+int a,b;
+void call(int mat[a][b]){
+	int i,j;
+	for(i=0;i<a;i++){
+		for(j=0;j<b;j++){
+			scanf("%d",&mat[i][j]);
+		}
+	}
+}
+void print(int mat[a][b]){
+	int i,j;
+	for(i=0;i<a;i++){
+		for(j=0;j<b;j++){
+			printf("%d ",mat[i][j]);
+		}
+		printf("\n");
+	}
+}
+void main(){
+	printf("Number of students: ") && scanf("%d",&a);
+	printf("Number of subjects: ") && scanf("%d",&b);
+	int mat1[a][b],mat2[a][b],mat[a][b],i,j;
+	if(0<a && b>0){
+		printf("Marks for the first exam:\n");
+		call(mat1);
+		printf("Marks for the second exam:\n");
+		call(mat2);
+		printf("Combined Marks:\n");
+		for(i=0;i<a;i++){
+			for(j=0;j<b;j++){
+				mat[i][j]=mat1[i][j]+mat2[i][j];
+			}
+		}
+		print(mat);
+	}else{
+		printf("Invalid numbers\n");
+	}
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Number·of·students:·3	
+Number·of·subjects:·3	
+Marks·for·the·first·exam:⏎	
+98 95 96	
+90 89 93	
+88 92 94	
+Marks·for·the·second·exam:⏎	
+99 91 92	
+87 90 95	
+90 96 95	
+Combined·Marks:⏎	
+197·186·188·⏎	
+177·179·188·⏎	
+178·188·189·⏎	
+Test case 2
+Number·of·students:·6	
+Number·of·subjects:·0	
+Invalid·numbers⏎
+
+*/
