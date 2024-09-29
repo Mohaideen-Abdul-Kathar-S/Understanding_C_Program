@@ -1,0 +1,43 @@
+
+
+
+
+#include <stdio.h>
+int gcd(int, int);
+void main() {
+int a,b,k;
+	printf("Enter two integer values: ");
+	scanf("%d %d",&a,&b);
+	k=gcd(a,b);
+	printf("The lcm of two numbers %d and %d: %d\n",a,b,k);
+
+}
+int gcd(int a, int b) {
+	int i,j,k;
+	if(b<a){
+		j=b;
+		b=a;
+		a=j;
+	}
+	for(i=1;i<=b;i++){
+		if(a%i==0 && b%i==0){
+			j=i;
+		}
+	}
+	k=a*b/j;
+	return k;
+
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·two·integer·values:·3 2	
+The·lcm·of·two·numbers·3·and·2:·6⏎	
+Test case 2
+Enter·two·integer·values:·12 144	
+The·lcm·of·two·numbers·12·and·144:·144⏎
+
+*/
