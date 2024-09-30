@@ -1,0 +1,52 @@
+//Write a C program to check whether the given integer is Armstrong or not and display the sum of individual digits of a given integer raised to the power of n.
+
+
+#include <stdio.h>
+#include <math.h>
+int main(){
+	unsigned long a,b,c=1,i,f,p,s=0,j,g,y=0,m=1;
+	printf("Integer: ") && scanf("%lu",&a);
+	printf("Power(n): ") && scanf("%lu",&b);
+	p=a;
+	g=a;
+	/*for(i=0;i<a;i++){
+		a=a/10;
+		c++;
+	}*/
+	c= (int)log10(a)+1;
+	for(i=0;i<=p;i++){
+		f=p%10;
+		y= y + pow(f,b);
+		s= s + pow(f,c);
+		p=p/10;
+		if(p==1 && m==1){
+			p=p+10;
+			m++;
+		}
+	}
+	if(s==g){
+		printf("Armstrong number\n");
+	}
+	else{
+		printf("Not an Armstrong number\n");
+	}
+	printf("Sum: %lu\n",y);
+	return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Integer:·153	
+Power(n):·2	
+Armstrong·number⏎	
+Sum:·35⏎	
+Test case 2
+Integer:·121	
+Power(n):·2	
+Not·an·Armstrong·number⏎	
+Sum:·6⏎
+
+*/
