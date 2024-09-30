@@ -1,0 +1,80 @@
+
+
+#include <stdio.h>
+int rows,cols,i,j,mat[10][10];
+
+void readMatrix(int mat[rows][cols]){
+	printf("Elements:\n");
+for(i=0;i<rows;i++){
+	for(j=0;j<cols;j++){
+		scanf("%d",&mat[i][j]);
+	}
+}
+}
+void printMatrix(int mat[rows][cols]){
+	printf("Matrix:\n");
+	for(i=0;i<rows;i++){
+		for(j=0;j<cols;j++){
+			printf("%d ",mat[i][j]);
+		}
+		printf("\n");
+	}
+}
+void transposeMatrix(int mat[rows][cols]){
+	printf("Transpose:\n");
+	for(i=0;i<cols;i++){
+		for(j=0;j<rows;j++){
+			printf("%d ",mat[j][i]);
+		}
+		printf("\n");
+	}
+}
+int main() {
+    printf("rows: ");
+    scanf("%d", &rows);
+    printf("columns: ");
+    scanf("%d", &cols);
+    int matrix[rows][cols];
+   
+    // Input: Read the matrix elements
+    readMatrix(matrix);
+ 
+    // Print the original matrix
+    printMatrix(matrix);
+    
+    // Print the transpose of the matrix
+    transposeMatrix(matrix);
+    
+    return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+rows:·2	
+columns:·2	
+Elements:⏎	
+8 9	
+6 5	
+Matrix:⏎	
+8·9·⏎	
+6·5·⏎	
+Transpose:⏎	
+8·6·⏎	
+9·5·⏎	
+Test case 2
+rows:·1	
+columns:·2	
+Elements:⏎	
+6 9	
+Matrix:⏎	
+6·9·⏎	
+Transpose:⏎	
+6·⏎	
+9·⏎
+
+
+*/
