@@ -1,0 +1,45 @@
+
+
+#include<stdio.h>
+int isPrime(int a){
+	int i,b=1;
+	for(i=2;i<a;i++){
+		if(a%i==0){
+			b=0;
+			break;
+		}
+	}
+	if(a<=1||b==0){
+		return 0;
+	}else{
+	return b;}
+}
+
+int main() {
+    int number;
+
+    // Input from the user
+    scanf("%d", &number);
+
+    // Check if the number is prime using the isPrime function
+    if (isPrime(number)) {
+        printf("%d is a prime number\n", number);
+    } else {
+        printf("%d is not a prime number\n", number);
+    }
+
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+2	
+2·is·a·prime·number⏎	
+Test case 2
+18	
+18·is·not·a·prime·number⏎
+
+*/
