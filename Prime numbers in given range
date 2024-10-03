@@ -1,0 +1,44 @@
+
+
+
+#include<stdio.h>
+void generatePrimesInRange(int a,int b){
+	int i,c=1;
+	printf("Prime numbers between %d and %d are: ",a,b);
+	while(a<=b){
+		for(i=2;i<a;i++){
+			if(a%i==0){
+				c=0;
+			}
+		}
+		if(c==1){
+			if(a!=1)
+			printf("%d ",a);
+		}
+		c=1;
+		a++;
+	}
+	printf("\n");
+}
+
+int main() {
+    int lower, upper;
+    scanf("%d %d", &lower, &upper);
+    generatePrimesInRange(lower, upper);
+
+    return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+2 10	
+Prime·numbers·between·2·and·10·are:·2·3·5·7·⏎	
+Test case 2
+1 50	
+Prime·numbers·between·1·and·50·are:·2·3·5·7·11·13·17·19·23·29·31·37·41·43·47·⏎
+
+*/
