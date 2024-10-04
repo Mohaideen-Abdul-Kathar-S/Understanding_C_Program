@@ -1,0 +1,36 @@
+
+
+
+#include<stdio.h>
+int countDigits(int n){
+	int i=0;
+	while(n!=0){
+		n=n/10;
+	i++;
+	}
+	return i;
+}
+int main() {
+    int num;
+
+    scanf("%d", &num);
+
+    int digitCount = countDigits(num);
+    printf("Number of digits in %d is: %d\n", num, digitCount);
+
+    return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+123456789	
+Number·of·digits·in·123456789·is:·9⏎	
+Test case 2
+-987654	
+Number·of·digits·in·-987654·is:·6⏎
+
+*/
