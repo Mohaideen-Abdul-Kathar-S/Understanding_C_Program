@@ -1,0 +1,84 @@
+
+
+
+
+#include<stdio.h>
+
+float SquareArea(float a){
+	return a*a;
+}
+float RectangleArea(float a,float b){
+	return a*b;
+}
+float TriangleArea(float a,float b){
+	return a*b/2;
+}
+float CircleArea(float a){
+	return a*a*3.14159;
+}
+
+int main() {
+    int choice;
+    float side, length, width, base, height, radius;
+    printf("1.Square\n");
+    printf("2.Rectangle\n");
+    printf("3.Triangle\n");
+    printf("4.Circle\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    
+    switch (choice) {
+        case 1:
+            printf("Side: ");
+            scanf("%f", &side);
+            printf("Area of the square: %.2f\n", SquareArea(side));
+            break;
+        case 2:
+            printf("Length: ");
+            scanf("%f", &length);
+            printf("Width: ");
+            scanf("%f", &width);
+            printf("Area of the rectangle: %.2f\n", RectangleArea(length, width));
+            break;
+        case 3:
+            printf("Base: ");
+            scanf("%f", &base);
+            printf("Height: ");
+            scanf("%f", &height);
+            printf("Area of the triangle: %.2f\n", TriangleArea(base, height));
+            break;
+        case 4:
+            printf("Radius: ");
+            scanf("%f", &radius);
+            printf("Area of the circle: %.2f\n", CircleArea(radius));
+            break;
+        default:
+            printf("Invalid choice\n");
+        }
+
+    return 0;
+}
+
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+1.Square⏎	
+2.Rectangle⏎	
+3.Triangle⏎	
+4.Circle⏎	
+Enter·your·choice:·1	
+Side:·20	
+Area·of·the·square:·400.00⏎	
+Test case 2
+1.Square⏎	
+2.Rectangle⏎	
+3.Triangle⏎	
+4.Circle⏎	
+Enter·your·choice:·6	
+Invalid·choice⏎
+
+*/
