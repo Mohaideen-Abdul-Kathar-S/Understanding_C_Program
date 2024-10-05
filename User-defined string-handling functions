@@ -1,0 +1,95 @@
+
+
+
+#include <stdio.h>
+#include<string.h>
+// Function to find the length of a string
+int stringLength(char *str) {
+   int a=strlen(str);
+}
+// Function to copy the contents of one string to another
+void stringCopy(char *dest,  char *src) {
+    strcpy(dest,src);
+
+}
+// Function to reverse the contents of a string
+void stringReverse(char *str2 ) {
+    int i=0, k=0, temp;
+	k=strlen(str2)-1;
+	while(i<k){
+		temp=str2[k];
+		str2[k]=str2[i];
+		str2[i]=temp;
+		i++;
+		k--;
+	}
+}
+// Function to compare two strings
+int stringCompare( char *str1, char *str2) {
+    int a=strcmp(str1,str2);
+	return a;
+
+}
+// Function to concatenate two strings
+void stringConcatenate(char *dest, const char *src) {
+    
+	strcat(dest,src);
+    
+}
+
+int main() {
+    char str1[100], str2[50], result[150];
+
+    printf("string1: ");
+    scanf("%s", str1);
+    printf("string2: ");
+    scanf("%s", str2);
+
+    int length = stringLength(str1);
+    printf("Length of str1: %d\n", length);
+
+    stringCopy(result, str1);
+    printf("Copy of str1: %s\n", result);
+
+    stringReverse(str2);
+    printf("Reverse of str2: %s\n", str2);
+
+    int cmp = stringCompare(str1, str2);
+    if (cmp == 0) {
+        printf("str1 and str2 are equal\n");
+    } else if (cmp < 0) {
+        printf("str1 is less than str2\n");
+    } else {
+        printf("str1 is greater than str2\n");
+    }
+    
+    stringCopy(result, str1);
+    stringReverse(str2);
+    stringConcatenate(result, str2);
+    printf("Concatenation of str1 and str2: %s\n", result);
+
+    return 0;
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+string1:·Code	
+string2:·Tantra	
+Length·of·str1:·4⏎	
+Copy·of·str1:·Code⏎	
+Reverse·of·str2:·artnaT⏎	
+str1·is·less·than·str2⏎	
+Concatenation·of·str1·and·str2:·CodeTantra⏎	
+Test case 2
+string1:·Hello	
+string2:·World	
+Length·of·str1:·5⏎	
+Copy·of·str1:·Hello⏎	
+Reverse·of·str2:·dlroW⏎	
+str1·is·less·than·str2⏎	
+Concatenation·of·str1·and·str2:·HelloWorld
+
+*/
