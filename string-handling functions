@@ -1,0 +1,102 @@
+/*
+
+Write a C program to demonstrate the usage of at least 10 predefined string-handling functions.
+
+
+
+Instructions:
+
+The functions that are to be used are as follows
+
+strcat() - Concatenates two strings.
+strlen() - Returns the length of a string.
+strcpy() - Copies one string to another.
+strcmp() - Compares two strings.
+strncpy() - Copies a specified number of characters from one string to another.
+strncat() - Concatenates a specified number of characters from one string to another.
+strcasecmp() - Case-insensitive string comparison.
+strncasecmp() - Case-insensitive comparison of a specified number of characters.
+strspn() - Returns the length of the initial segment of a string containing only specified characters.
+strtok() - Tokenizes a string based on a delimiter (Here the delimiter used is comma(,)).
+
+*/
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[50];
+    char str2[50];
+    char str3[50];
+
+    printf("string1: ");
+    scanf("%s", str1);
+
+    printf("string2: ");
+    scanf("%s", str2);
+int t;
+printf("1. strcat(): %s\n",strcat(str1,str2));
+printf("2. strlen(): %d\n",strlen(str1));
+printf("3. strcpy(): %s\n",strcpy(str3,str1));
+printf("4. strcmp(): %d\n",strcmp(str1,str2));
+printf("characters to be copied: ");
+scanf("%d",&t);
+char str4[50];
+printf("5. strncpy(): %s\n",strncpy(str4,str3,t));
+printf("characters to be concatenated: ");
+scanf("%d",&t);
+printf("6. strncat(): %s\n",strncat(str3,str2,t));
+printf("7. strcasecmp(): %d\n",strcasecmp(str3,str2));
+printf("characters to be compared: ");
+scanf("%d",&t);
+printf("8. strncasecmp(): %d\n",strncasecmp(str3,str2,t));
+printf("Enter initial segment: ");
+scanf("%s",str4);
+printf("9. strspn(): %d\n",strspn(str3,str4));
+printf("10. strtok(): %s\n",strtok(str3,","));
+
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+string1:·aabb	
+string2:·ccdd	
+1.·strcat():·aabbccdd⏎	
+2.·strlen():·8⏎	
+3.·strcpy():·aabbccdd⏎	
+4.·strcmp():·-2⏎	
+characters·to·be·copied:·1	
+5.·strncpy():·a⏎	
+characters·to·be·concatenated:·2	
+6.·strncat():·aabbccddcc⏎	
+7.·strcasecmp():·-2⏎	
+characters·to·be·compared:·2	
+8.·strncasecmp():·-2⏎	
+Enter·initial·segment:·a	
+9.·strspn():·2⏎	
+10.·strtok():·aabbccddcc⏎	
+Test case 2
+string1:·a,b,c,d	
+string2:·a,b	
+1.·strcat():·a,b,c,da,b⏎	
+2.·strlen():·10⏎	
+3.·strcpy():·a,b,c,da,b⏎	
+4.·strcmp():·44⏎	
+characters·to·be·copied:·1	
+5.·strncpy():·a⏎	
+characters·to·be·concatenated:·2	
+6.·strncat():·a,b,c,da,ba,⏎	
+7.·strcasecmp():·44⏎	
+characters·to·be·compared:·3	
+8.·strncasecmp():·0⏎	
+Enter·initial·segment:·a	
+9.·strspn():·1⏎	
+10.·strtok():·a⏎
+
+*/
+	
