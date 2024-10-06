@@ -1,0 +1,54 @@
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[100],b[100],c;
+	int i,j,n,k=0,p=0;
+	gets(a);
+	n=strlen(a);
+	for(i=n-1;i!=-1;i--){
+		b[k]=a[i];
+		k++;
+		a[i]='\0';
+		if(i==0)
+			b[k]='\0';
+	}
+	n=strlen(b);
+	i=0;
+	while(i<n){
+		while(b[i]==' '){
+			i++;
+		}
+		k=i;
+		while(b[i]!=' '&& i<=n-1){
+			i++;
+		}
+		p=i-1;
+		while(k<p){
+			c=b[p];
+			b[p]=b[k];
+			b[k]=c;
+			k++;
+			p--;
+		}
+	}
+	b[i]=' ';
+	printf("%s\n",b);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Alice Bob Maiden	
+Maiden·Bob·Alice·⏎	
+Test case 2
+Dohni Virat Rohith Shami Surya Gill	
+Gill·Surya·Shami·Rohith·Virat·Dohni·⏎
+
+*/
