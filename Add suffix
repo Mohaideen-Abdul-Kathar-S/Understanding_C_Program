@@ -1,0 +1,54 @@
+
+/*
+
+The students of a class are asked to write a program to add 'ing' at the end of a given string. If the given string already ends with 'ing' then add 'ly' instead. If the length of the given string is less than 3, leave it unchanged. Can you help them to implement it?
+
+
+
+Input format:
+
+The input is the string.
+
+
+
+Output format:
+
+The output is the string after adding the relevant suffix.
+
+
+
+Note:
+
+The input must contain the alphabetical characters.
+
+*/
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[100];
+	gets(a);
+	int n=strlen(a);
+	if(n>2){
+		if(a[n-1]=='g'&& a[n-2]=='n'&& a[n-3]=='i'){
+			strcat(a,"ly");
+		}else strcat(a,"ing");
+	}
+	printf("%s\n",a);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+cod	
+coding⏎	
+Test case 2
+succeeding	
+succeedingly⏎	
+Test case 3
+an	
+an⏎
+
+*/
