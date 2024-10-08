@@ -1,0 +1,45 @@
+
+
+
+#include<stdio.h>
+#include<string.h>
+char a[100],b[100];
+int check(char ch){
+	int i=0,k=0;
+	if(strchr(b,ch)) return 1;
+	else return 0;
+}
+void main(){
+	int i,j,k;
+	gets(a);
+	gets(b);
+	if(strlen(a)==strlen(b)){
+	for(i=0;a[i]!='\0';i++){
+		j=check(a[i]);
+		if(j==0){printf("not connected\n");
+				 break;
+				}
+	}
+	}else printf("not connected\n");
+	if(j==1) printf("connected\n");
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+listen	
+silent	
+connected⏎	
+Test case 2
+tap	
+tan	
+not·connected⏎	
+Test case 3
+cried	
+cred	
+not·connected⏎
+
+*/
