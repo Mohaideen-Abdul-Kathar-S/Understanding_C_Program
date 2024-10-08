@@ -1,0 +1,38 @@
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[100];
+	int n,i;
+	scanf("%s",&a);
+
+	for(i=0;i<=strlen(a);i++){
+		if(islower(a[i])){
+			a[i]=toupper(a[i]);
+		}else {
+			a[i]=tolower(a[i]);
+		}
+	}
+	printf("%s",a);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+maHenDraSinghDhOni	
+MAhENdRAsINGHdHoNI	
+Test case 2
+CODEtantra	
+codeTANTRA	
+Test case 3
+codeTANTRA	
+CODEtantra	
+Test case 4
+HELLOhiNAMSTHEY	
+helloHInamsthey
+
+*/
