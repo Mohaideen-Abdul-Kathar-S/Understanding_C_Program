@@ -1,0 +1,35 @@
+
+//Determining the Existence of a Chosen Word in a Life Quote
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[100],b[100];
+	gets(a);
+	gets(b);
+	if(strstr(a,b)) puts("Exists");
+	else puts("Dosen't Exists");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Keepcalmandcarryon	
+health	
+Doesn't·Exists	
+Test case 2
+Liveandlearn	
+learn	
+Exists⏎	
+Test case 3
+Whatisthislife	
+exist	
+Doesn't·Exists	
+Test case 4
+Successisnotfinal	
+success	
+Doesn't·Exists
+
+*/
