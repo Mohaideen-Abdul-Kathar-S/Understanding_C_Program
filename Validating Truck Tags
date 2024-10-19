@@ -1,0 +1,72 @@
+
+/*
+
+Problem Description:
+
+Afghanistan has been surrounded by attackers. A truck enters the city. The driver claims the load is food and medicine from Pakistanis. Yasir is one of the soldiers in Afghanistan. He doubts about the truck, maybe it's from the siege. He knows that a tag is valid if the sum of every two consecutive digits of it is even and its letter is not a vowel. If the tag is invalid then Yasir needs to arrest the driver of the truck with an invalid tag. If it is valid the truck is allowed inside the country.
+
+
+
+Can you help Yasir to determine if he needs to arrest or allow the truck?
+
+
+
+Input Format:
+
+The first line contains a string of length 9. 
+The format is "DDXDDD-DD", where D stands for a digit (non-zero) and X is an uppercase English letter.
+
+
+Output Format:
+
+Print "Allowed" if the tag is valid, print "Arrest" otherwise.
+
+
+Explanation:
+
+Suppose the input tag is 37W912-39
+
+The sum of Consecutive Digits:
+
+3 + 7 = 10 --> Even (Digts before the letter).
+9 + 1 + 2 = 12 --> Even (Digits before the letter and before hi-phen).
+3 + 9 = 12 --> Even (Digits after hi-phen).
+"W" is not a vowel.
+
+Both conditions are satisfied. Therefore, the truck is allowed.
+
+*/
+
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[10];
+	int i=0,j=0,k=1;
+	gets(a);
+	if(((a[0]+a[1])%2==0) && (a[3]+a[4]+a[5])%2==0 && (a[7]+a[8])%2==0) j++;
+	if(a[2]=='A' || a[2]=='E'|| a[2]=='I' || a[2]=='O' || a[2]=='U') k=0;
+	if(a[6]=='-') i++;
+
+	if(j==1 && k==1 && i==1) puts("Allowed");
+	else puts("Arrest");
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+42S426-73	
+Allowed	
+Test case 2
+42A426-73	
+Arrest	
+Test case 3
+25G843-61	
+Arrest	
+Test case 4
+33A635-12	
+Arrest
+
+*/
