@@ -1,0 +1,27 @@
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main(){
+	char a[100];
+	gets(a);
+	for(int i=strlen(a)-1;i!=-1;i--)
+		printf("%c",a[i]);
+	printf("\n");
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+program	
+margorp⏎	
+Test case 2
+codetantra@!23	
+32!@artnatedoc⏎
+
+*/
