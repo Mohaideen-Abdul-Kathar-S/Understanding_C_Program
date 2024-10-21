@@ -1,0 +1,26 @@
+
+
+
+#include <stdio.h>
+void main() {
+	int num1, num2;
+	int *a, *b;
+printf("Enter two int values : ") && scanf("%d %d",&num1,&num2);
+a=&num1;
+b=&num2;
+
+	printf("Sum of two integers %d and %d = %d\n", *a, *b, *a + *b);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·two·int·values·:·56 65	
+Sum·of·two·integers·56·and·65·=·121⏎	
+Test case 2
+Enter·two·int·values·:·-98 35	
+Sum·of·two·integers·-98·and·35·=·-63⏎
+
+*/
