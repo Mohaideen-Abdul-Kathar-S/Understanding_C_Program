@@ -1,0 +1,28 @@
+
+
+
+#include <stdio.h>
+void add(int a,int b,int c,int d,int *p){
+	*p=a+b+c+d;
+}
+void main() {
+	int firstNum,secondNum,thirdNum,fourthNum,sum;
+	printf("Enter four integer values : ");
+	scanf("%d %d %d %d",&firstNum,&secondNum,&thirdNum,&fourthNum);
+	add(firstNum, secondNum, thirdNum, fourthNum, &sum);
+	printf("%d + %d + %d + %d = %d\n", firstNum, secondNum, thirdNum, fourthNum, sum);
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·four·integer·values·:·4 5 6 7	
+4·+·5·+·6·+·7·=·22⏎	
+Test case 2
+Enter·four·integer·values·:·8 78 98 6	
+8·+·78·+·98·+·6·=·190⏎
+
+*/
