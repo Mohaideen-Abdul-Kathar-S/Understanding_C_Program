@@ -1,0 +1,100 @@
+//Write a C program to perform Increment and Decrement operations on integers using Pointer.
+
+#include<stdio.h>
+void inc(int *ptr,int n){
+	int i;
+	printf("After incrementing the elements: ");
+	for(i=0;i<n;i++){
+		printf("%d ",++*ptr);
+		++ptr;
+	}
+	printf("\n");
+}
+void dec(int *ptr,int n){
+	int i;
+	printf("After decrementing the elements: ");
+	for(i=0;i<n;i++){
+		printf("%d ",--*ptr);
+	++ptr;
+	}
+	printf("\n");
+}
+void main(){
+	int n,i,k;
+	printf("Enter the number of elements: ") && scanf("%d",&n);
+	int a[n-1];
+	printf("Enter the elements: ");
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	front:
+	printf("1. Increment\n2. Decrement\n3. Exit\nEnter your choice: ") && scanf("%d",&k);
+	if(k==1){
+		inc(a,n);
+		goto front;
+	}else if(k==2){
+		dec(a,n);
+		goto front;
+	}else if(k==3){
+
+	}else{
+		printf("Invalid\n");
+	}
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·the·number·of·elements:·3	
+Enter·the·elements:·1 2 3	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+After·incrementing·the·elements:·2·3·4·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+After·decrementing·the·elements:·1·2·3·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·3	
+Test case 2
+Enter·the·number·of·elements:·4	
+Enter·the·elements:·1 2 5 4	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+After·decrementing·the·elements:·0·1·4·3·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+After·incrementing·the·elements:·1·2·5·4·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+After·incrementing·the·elements:·2·3·6·5·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·1	
+After·incrementing·the·elements:·3·4·7·6·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·2	
+After·decrementing·the·elements:·2·3·6·5·⏎	
+1.·Increment⏎	
+2.·Decrement⏎	
+3.·Exit⏎	
+Enter·your·choice:·3
+
+*/
