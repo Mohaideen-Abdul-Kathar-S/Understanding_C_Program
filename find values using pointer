@@ -1,0 +1,38 @@
+
+
+
+
+#include <stdio.h>
+void main() {
+	
+	int *a;
+	float *b;
+	char *c;
+	
+printf("Enter int, float and char values :");
+scanf("%d %f %c",&a,&b,&c);
+	int *a1=&a;
+	float *b2=&b;
+	char *c3=&c;
+	printf("Given int value:%d\nGiven float value:%f\nGiven char value:%c\n",*a1,*b2,*c3);
+}
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Enter·int,·float·and·char·values·:23 3.56 A	
+Given·int·value:23⏎	
+Given·float·value:3.560000⏎	
+Given·char·value:A⏎	
+Test case 2
+Enter·int,·float·and·char·values·:100 1.11 k	
+Given·int·value:100⏎	
+Given·float·value:1.110000⏎	
+Given·char·value:k⏎
+
+*/
+
+
+	
