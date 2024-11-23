@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include "Program1102a.c"
+void main() {
+	struct student s;
+	read1(&s);
+	compute(&s);
+	display(s);
+}
+
+//Program1102a.c
+
+struct student{
+	float roll,sub1,sub2,sub3;
+};
+void read1(struct student *a){
+	printf("Enter regdno, three subjects marks : ");
+	scanf("%f %f %f %f",&a->roll,&a->sub1,&a->sub2,&a->sub3);
+}
+void compute(struct student *a){
+	
+}
+void display(struct student r){
+	printf("Student regdno = %.0f\n",r.roll);
+	printf("Total marks = %.0f\n",r.sub1 + r.sub2 + r.sub3);
+	printf("Average marks = %f\n",(r.sub1+r.sub2+r.sub3)/3);
+}
+
+
+/*
+Sample Test Cases
+Test case 1
+Enter·regdno,·three·subjects·marks·:·1001 56 78 83	
+Student·regdno·=·1001⏎	
+Total·marks·=·217⏎	
+Average·marks·=·72.333336⏎	
+Test case 2
+Enter·regdno,·three·subjects·marks·:·1003 67 36 75	
+Student·regdno·=·1003⏎	
+Total·marks·=·178⏎	
+Average·marks·=·59.333332⏎
+
+*/
