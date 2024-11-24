@@ -1,0 +1,39 @@
+
+
+#include <stdio.h>                                                                                                      
+struct Student{
+char name[100];
+int roll,clas,year,tmark;
+};
+void read(struct Student *s){
+	printf("Enter Roll.No: ") && scanf("%d",&s->roll);
+	printf("Enter Name: ") && scanf("%s",s->name);
+	printf("Enter class: ") && scanf("%d",&s->clas);
+	printf("Enter year: ") && scanf("%d",&s->year);
+	printf("Enter the total marks: ") && scanf("%d",&s->tmark);
+}
+void print(struct Student *s){
+	printf("Roll.No = %d\nName = %s\nYear of the student = %d\nTotal marks of the student = %d\n",s->roll,s->name,s->year,s->tmark);
+}
+
+void main() {
+	struct Student S;
+	read(&S);
+	print(&S);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+Enter·Roll.No:·15	
+Enter·Name:·Suresh	
+Enter·class:·3	
+Enter·year:·2019	
+Enter·the·total·marks:·92	
+Roll.No·=·15⏎	
+Name·=·Suresh⏎	
+Year·of·the·student·=·2019⏎	
+Total·marks·of·the·student·=·92⏎
+
+*/
