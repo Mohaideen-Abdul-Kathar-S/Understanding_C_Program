@@ -1,0 +1,62 @@
+
+
+
+#include <stdio.h>
+struct Employee {
+char name[100],department[100];
+float salary;
+};
+void displayEmployeeDetails( struct Employee *s) {
+printf("Name: %s\nDepartment: %s\nSalary: %0.2f\n",s->name,s->department,s->salary);
+}
+
+void updateSalary( struct Employee *s,float news) {
+s->salary=news;
+}
+
+int main() {
+    
+    struct Employee companyEmployee;
+
+    scanf(" %[^\n]s", companyEmployee.name);
+    scanf(" %[^\n]s", companyEmployee.department);
+    scanf("%f", &companyEmployee.salary);
+
+    displayEmployeeDetails(&companyEmployee);
+
+    float newSalary;
+    scanf("%f", &newSalary);
+
+    updateSalary(&companyEmployee, newSalary);
+    displayEmployeeDetails(&companyEmployee);
+
+    return 0;
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+Jenny	
+HR	
+45600	
+Name:·Jenny⏎	
+Department:·HR⏎	
+Salary:·45600.00⏎	
+56780	
+Name:·Jenny⏎	
+Department:·HR⏎	
+Salary:·56780.00⏎	
+Test case 2
+Edward	
+Marketting	
+30856	
+Name:·Edward⏎	
+Department:·Marketting⏎	
+Salary:·30856.00⏎	
+89652.5	
+Name:·Edward⏎	
+Department:·Marketting⏎	
+Salary:·89652.50⏎
+
+*/
