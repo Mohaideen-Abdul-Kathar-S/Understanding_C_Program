@@ -1,0 +1,65 @@
+
+
+#include <stdio.h>
+struct Movie {
+	char title[100],director[50];
+	int releaseYear;
+};
+void displayMovieDetails( struct Movie s) {
+   printf("Title: %s\nDirector: %s\nRelease Year: %d\n",s.title,s.director,s.releaseYear);
+}
+void updateReleaseYear( struct Movie *s,int year) {
+	s->releaseYear=year;
+}
+int main() {
+    // Example usage of the Movie structure and functions
+    struct Movie movie1;
+
+    // Input movie details
+    scanf(" %[^\n]s", movie1.title);
+
+    scanf(" %[^\n]s", movie1.director);
+
+    scanf("%d", &movie1.releaseYear);
+
+    // Display initial movie details
+    displayMovieDetails(movie1);
+
+    // Update the release year
+    int newReleaseYear;
+    scanf("%d", &newReleaseYear);
+    updateReleaseYear(&movie1, newReleaseYear);
+
+    // Display updated movie details
+    displayMovieDetails(movie1);
+
+    return 0;
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+Bahubali	
+SS Rajamouli	
+2014	
+Title:·Bahubali⏎	
+Director:·SS·Rajamouli⏎	
+Release·Year:·2014⏎	
+2015	
+Title:·Bahubali⏎	
+Director:·SS·Rajamouli⏎	
+Release·Year:·2015⏎	
+Test case 2
+Titanic	
+James Cameroon	
+195	
+Title:·Titanic⏎	
+Director:·James·Cameroon⏎	
+Release·Year:·195⏎	
+1997	
+Title:·Titanic⏎	
+Director:·James·Cameroon⏎	
+Release·Year:·1997⏎
+
+*/
