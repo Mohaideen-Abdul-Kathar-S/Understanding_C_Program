@@ -1,0 +1,70 @@
+
+#include <stdio.h>
+// Define a structure to represent a song
+struct Song {
+char title[100],artist[100];
+int releaseYear;
+};
+void displaySongDetails( struct Song s ) {
+printf("Song Title: %s\nArtist: %s\nRelease Year: %d\n",s.title,s.artist,s.releaseYear);
+}
+// Function to update the release year of a song
+void updateReleaseYear( struct Song *s,int update ) {
+s->releaseYear=update;
+}
+int main() {
+    // Declare variables
+    struct Song mySong;
+
+    // Input: Song details
+    scanf(" %[^\n]s", mySong.title);
+
+    scanf(" %[^\n]s", mySong.artist);
+
+    scanf("%d", &mySong.releaseYear);
+
+    // Display initial song details
+    displaySongDetails(mySong);
+
+    // Input: Updated release year
+    int updatedYear;
+    scanf("%d", &updatedYear);
+
+    // Update the release year
+    updateReleaseYear(&mySong, updatedYear);
+
+    // Display updated song details
+    displaySongDetails(mySong);
+
+    return 0;
+}
+
+
+/*
+
+
+Sample Test Cases
+Test case 1
+Blinding Lights	
+The Weeknd	
+2019	
+Song·Title:·Blinding·Lights⏎	
+Artist:·The·Weeknd⏎	
+Release·Year:·2019⏎	
+2020	
+Song·Title:·Blinding·Lights⏎	
+Artist:·The·Weeknd⏎	
+Release·Year:·2020⏎	
+Test case 2
+Billie Jean	
+Michael Jackson	
+1999	
+Song·Title:·Billie·Jean⏎	
+Artist:·Michael·Jackson⏎	
+Release·Year:·1999⏎	
+1983	
+Song·Title:·Billie·Jean⏎	
+Artist:·Michael·Jackson⏎	
+Release·Year:·1983⏎
+
+*/
