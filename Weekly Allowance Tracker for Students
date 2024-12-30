@@ -1,0 +1,50 @@
+
+
+
+
+#include <stdio.h>
+// Define a structure for each item
+struct Item {
+char itemname[100];
+float rate;
+};
+int main() {
+    float weeklyAllowance,total=0;
+	int i,numItems;
+    printf("Weekly allowance: $");
+    scanf("%f", &weeklyAllowance);
+    printf("number of items purchased: ");
+    scanf("%d", &numItems);
+	struct Item item[numItems];
+	for(i=0;i<numItems;i++){
+		scanf("%s %f",item[i].itemname,&item[i].rate);
+	}
+	for(i=0;i<numItems;i++){
+		total=total+item[i].rate;
+	}
+    printf("Total Weekly Spending: $%.2f\n" ,total );
+    printf("Remaining Allowance: $%.2f\n" ,weeklyAllowance-total  );
+
+    return 0;
+
+}
+
+/*
+Sample Test Cases
+Test case 1
+Weekly·allowance:·$200	
+number·of·items·purchased:·3	
+Pens 50	
+Book 80	
+Snacks 20	
+Total·Weekly·Spending:·$150.00⏎	
+Remaining·Allowance:·$50.00⏎	
+Test case 2
+Weekly·allowance:·$300	
+number·of·items·purchased:·2	
+Dress 250	
+Shoes 250	
+Total·Weekly·Spending:·$500.00⏎	
+Remaining·Allowance:·$-200.00⏎
+
+*/
