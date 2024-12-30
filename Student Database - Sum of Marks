@@ -1,0 +1,53 @@
+
+
+
+#include <stdio.h>
+// Definition of the Student structure
+struct Student {
+char name[100];
+int rollNumber;
+float mathMarks,physicsMarks,chemistryMarks;
+};
+float calculateAverage( struct Student s) {
+return (s.mathMarks+s.physicsMarks+s.chemistryMarks);
+}
+int main() {
+    // Example usage of the Student structure and calculateAverage function
+    struct Student student1;
+
+    // Input student details
+    scanf("%s", student1.name);
+
+    scanf("%d", &student1.rollNumber);
+
+    scanf("%f", &student1.mathMarks);
+
+    scanf("%f", &student1.physicsMarks);
+
+    scanf("%f", &student1.chemistryMarks);
+
+    float averageMarks = calculateAverage(student1);
+    printf("%.2f\n",averageMarks);
+
+    return 0;
+}
+
+
+/*
+Sample Test Cases
+Test case 1
+John	
+100	
+89.7	
+78.5	
+90.0	
+258.20⏎	
+Test case 2
+Kyathi	
+890	
+98.5	
+92.5	
+89	
+280.00⏎
+
+*/
