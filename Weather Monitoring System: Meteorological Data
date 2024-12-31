@@ -1,0 +1,49 @@
+
+
+#include <stdio.h>
+// Define the structure for a student in the Weather Monitoring System
+struct WeatherMonitoringStudent {
+int roll_number;
+float temperature,humidity,wind_speed;
+};
+float calculate_and_display_highest_value( struct WeatherMonitoringStudent stud) {
+if(stud.temperature >= stud.humidity && stud.temperature >= stud.wind_speed) return stud.temperature ;
+else if(stud.humidity >= stud.temperature && stud.humidity >= stud.wind_speed) return stud.humidity ;
+else return stud.wind_speed ;
+}
+int main() {
+    // Input from the user
+    struct WeatherMonitoringStudent student_info;
+
+    scanf("%d", &student_info.roll_number);
+
+    scanf("%f", &student_info.temperature);
+
+    scanf("%f", &student_info.humidity);
+
+    scanf("%f", &student_info.wind_speed);
+
+    // Calculate and display the highest value
+    float highest_value = calculate_and_display_highest_value(student_info);
+    printf("%.2f\n", highest_value);
+
+    return 0;
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+101	
+30.25	
+12.03	
+74	
+74.00⏎	
+Test case 2
+121	
+25.623	
+12.236	
+85.456	
+85.46⏎
+
+*/
