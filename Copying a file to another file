@@ -1,0 +1,29 @@
+
+
+
+#include<stdio.h>
+void main(){
+	char a[100],b[100];
+	printf("file1:") && scanf("%s",a);
+	printf("Data from file2:\n");
+	FILE *fb=fopen(a,"r");
+	while(fgets(b,100,fb)!=NULL){
+		printf("%s",b);
+	}
+	fclose(fb);
+}
+
+/*
+
+Sample Test Cases
+Test case 1
+file1:input1.txt	
+Data·from·file2:⏎	
+CodeTantra⏎	
+Start·coding·in·60·mins	
+Test case 2
+file1:input2.txt	
+Data·from·file2:⏎	
+Precision·that·helps·you·get·in·right·everytime
+
+*/
