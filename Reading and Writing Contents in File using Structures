@@ -1,0 +1,41 @@
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+// Define a structure to represent a person
+struct Person {
+	char name[100];
+	int age;
+};
+int main() {
+	struct Person p1;
+	printf("Enter name: ") && scanf("%s",p1.name);
+	printf("Enter age: ") && scanf("%d",&p1.age);
+    FILE *file = fopen("person.txt", "w" );
+    fprintf(file, "%s %d\n",p1.name,p1.age);
+	fclose(file);
+	//file=fopen("person.txt","r");
+	printf("Person details:\n");
+	printf("Name: %s\nAge: %d\n",p1.name,p1.age);
+    return 0;
+}
+
+
+/*
+
+Sample Test Cases
+Test case 1
+Enter·name:·Jack	
+Enter·age:·25	
+Person·details:⏎	
+Name:·Jack⏎	
+Age:·25⏎	
+Test case 2
+Enter·name:·William	
+Enter·age:·28	
+Person·details:⏎	
+Name:·William⏎	
+Age:·28⏎
+
+*/
