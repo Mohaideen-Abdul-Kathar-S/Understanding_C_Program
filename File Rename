@@ -1,0 +1,26 @@
+
+
+
+#include <stdio.h>
+void main() {
+	FILE *fp, *fp1, *fp2;
+	char ch, SampleFile2[10];
+	fp = fopen("SampleFile1.txt", "w");
+	printf("Text for SampleFile1.txt with @ at end: ");
+	while ((ch = getchar()) != '@') {
+		putc(ch, fp);
+	}
+	putc(ch, fp);
+	fclose(fp);
+	printf("new file name: ");
+scanf("%s",SampleFile2);
+	printf("Text of %s: ",SampleFile2);
+	rename("SampleFile1.txt",SampleFile2);
+	
+	fp=fopen(SampleFile2,"r");
+	while((ch=getc(fp)) != '@'){
+	printf("%c",ch);
+	}
+	printf("\n");
+	fclose(fp);
+}
