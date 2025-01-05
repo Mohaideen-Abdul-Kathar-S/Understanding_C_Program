@@ -1,0 +1,20 @@
+
+
+#include<stdio.h>
+void main(){
+	int n,i;
+	char in[10],out[10],buf[100];
+	printf("no of employees: ") && scanf("%d",&n);
+	FILE *fb=fopen("time.txt","w");
+	for(i=1;i<=n;i++){
+		printf("login: ") && scanf("%s",in);
+		printf("signoff: ") && scanf("%s",out);
+		fprintf(fb,"(%d)login: %s\nsingoff: %s\n",i,in,out);
+	}
+	fclose(fb);
+	printf("Employees timings:\n");
+	fb=fopen("time.txt","r");
+	while(fgets(buf,sizeof(buf),fb)!=NULL){
+		printf("%s",buf);
+	}
+}
