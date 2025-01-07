@@ -1,0 +1,11 @@
+
+
+
+#include<stdio.h>
+#define	PI 3.14
+void main() {
+	float r;
+	printf("Radius: ") && scanf("%f",&r);
+	printf("Area: %.2f\n", PI*r*r);
+	printf("Perimeter: %.2f\n",PI*r*2);
+}
