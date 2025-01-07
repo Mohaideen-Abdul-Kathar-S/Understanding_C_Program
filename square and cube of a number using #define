@@ -1,0 +1,12 @@
+
+
+#include<stdio.h>
+#define	SQUARE(a)(a*a)
+#define	cube(a)(a*a*a)
+
+void main() {
+	int n;
+	printf("n: ") && scanf("%d",&n);
+	printf("Square of %d:%d\n", n, SQUARE(n));
+	printf("Cube of %d:%d\n",n, cube(n));
+}
